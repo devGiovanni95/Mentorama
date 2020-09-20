@@ -4,34 +4,34 @@ import java.util.Scanner;
 
 public class Principal3 {
     public static void main(String[] args) {
-        Principal2 principal = new Principal2();
+        Principal3 principal = new Principal3();
 
         System.out.println("Bem vindo ao sistema de TodoList");
 
-        principal.imprimeMenu();
+        List<String> categoria = new ArrayList<String>();
 
 /*criamos esse bolean para podermos fazer com que o codigo flua com mais facilidade assim com o while podendo criar quantas categorias quizermos
 * */
         boolean continua = true;
         while (continua) {
-            String valorDecisao = principal.decisaoUsuario();
+            principal.imprimeMenu();
+            String valorDecisao = principal.decisaoUsuario();/*foi retirada de cima de categoria.add pois ela esta morrendo apos ser utilizada*/
 
             if (valorDecisao.equals("1")) {
 
-                System.out.println("Digite o nome da categoria sem espaços ");
+                System.out.println("Digite o nome da categoria ssem espaços ");
                 Scanner scanNomeCategoria = new Scanner(System.in);
                 String nomeCategoria = scanNomeCategoria.next();
 
-                List<String> categoria = new ArrayList<String>();
                 categoria.add(nomeCategoria);
 
                 for (String nome : categoria) {
                     System.out.println(nome);
                 }
 
-                principal.imprimeMenu();
-
-                valorDecisao = principal.decisaoUsuario();
+//                principal.imprimeMenu();
+//
+//                valorDecisao = principal.decisaoUsuario();
             }
         }
 
