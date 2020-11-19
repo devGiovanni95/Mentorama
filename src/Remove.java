@@ -41,11 +41,14 @@ public class Remove {
                 }
                 case "3": {
                     System.out.println(categoria);
-                    System.out.println("Qual Categoria voce deseja remover ? ");
+                 /*   System.out.println("Qual Categoria voce deseja remover ? ");
                     System.out.println("Lembrando que a primeira posição equivale sempre a 0, coleque a posição em numero:");
+                   */
+                    System.out.println("Qual nome da Categoria voce deseja remover ? ");
+
 
                     Scanner remover = new Scanner(System.in);
-                    int remove = remover.nextInt();
+                    String remove = remover.next();
 
                     categoria.remove(remove);
 
